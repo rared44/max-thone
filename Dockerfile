@@ -9,6 +9,6 @@ RUN apt-get install -y nodejs
 RUN npm i -g npm
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-ENV PATH="/home/zira/bin:$PATH"
+ENV PATH="/home/max/bin:$PATH"
 
-CMD ["python3","-m","max"]
+CMD ["python3","-max","max"]
