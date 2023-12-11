@@ -3,34 +3,51 @@
   "description": "〔 سـورس ماكس max 𓅛 〕افضـل سـورسـات تليثـون يـوزربـوت العربيـة : › عربـي بالكـامل › تحديثـات متواصـله › فـارات تلقـائيـه بسهولـه〔 حصريـاً 〕- مطـور السـورس : رعد ",
   "logo": "⌔︙تـم التحـميل الـى ./temp/photo_2023-12-10_18-09-06.jpg",
   "keywords": ["plugin","modular","productivity"],
-  "repository": "https://github.com/rared44/max-thone.git",
-  "website": "#TODO",
+  "repository": "https://github.com/rared44/max-thone/",
+   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
-    "APP_ID": {
-      "description": "كـود ايبي ايـدي〔 App id 〕لا تغيرهـا",
-      "value": "27455984"
-    },
-    "API_HASH": {
-      "description": "كـود ايبي هـاش〔 Api hash 〕..لا تغيرهـا",
-      "value": "62d5f68ce2e9189636967120220f5755"
-    },
-    "STRING_SESSION": {
-      "description": "كـــود تيـــرمكـــس - الكـود الكبيـر مـن بـوت تيرمكــس",
+    "ALIVE_NAME": {
+      "description": "هنا ضع اسم التلجرام الخاص بك",
       "value": ""
     },
-    "TG_BOT_TOKEN": {
-      "description": "تـــوكـــن البـــوت - من بـوت فـاذر〔 @Botfather 〕..",
+    "APP_ID": {
+      "description": "هنا ضع الاب ايدي الخاص بك يتكون من 8 ارقام", 
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "هنا ضع الايبي هاش الخاص بك",
+      "value": ""
+    },
+    "ENV": {
+      "description": "لا تغير هذه القيمه",
+      "value": "ANYTHING"
+    },
+    "STRING_SESSION": {
+      "description": "هنا ضع كود سيشن تيليثون كود تيرمكس الخاص بك",
       "value": ""
     },
     "HEROKU_API_KEY": {
-      "description": "كـــود مفتـــاح هيروكـــو - تروح ع الرابـط » https://dashboard.heroku.com/account  ع آخـر خانـه وتنسـخ الكـود لهنـا",
+      "description": "هنا ضع الايبي كي الخاص بحساب هيروكو من هذا الرابط https://dashboard.heroku.com/account",
       "value": "",
       "required": false
     },
     "HEROKU_APP_NAME": {
-      "description": "اســـم التطبيـــق - نفـس اول مربـع بالقائمـة نسـخ لصـق حـروف انكلـش صغيـره",
+      "description": "اسم التطبيق اول مربع كتبته خلي هنا نفسه وحروف صغيره",
       "value": "",
+      "required": false
+    },
+    "TG_BOT_USERNAME": {
+      "description": "هنا ضع معرف بوتك بدون @",
+      "value": ""
+    },
+    "TG_BOT_TOKEN": {
+      "description": "هنا ضع توكن بوتك الذي صنعته",
+      "value": ""
+    },
+    "TZ": {
+      "description": "المنطقه الزمنيه من القارة الخاصه بك وعاصمه بلدك يجب ان يكون اول حرف كبير",
+      "value": "Asia/Baghdad",
       "required": false
     }
   },
@@ -41,6 +58,8 @@
     }
   }],
   "buildpacks": [{
+    "url": "https://github.com/Source-Ze/heroku-buildpack-ffmpeg-latest"
+  },{
     "url":"https://github.com/heroku/heroku-buildpack-google-chrome"
   },{
     "url":"https://github.com/heroku/heroku-buildpack-chromedriver"
@@ -53,15 +72,6 @@
   },{
     "url": "https://github.com/chrismytton/heroku-buildpack-jq"
   },{
-    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-  },{
     "url": "heroku/python"
-  }],
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "basic"
-    }
-  },
-  "stack": "heroku-22"
+  }]
 }
